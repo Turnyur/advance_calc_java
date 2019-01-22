@@ -1,0 +1,130 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15-Sep-2016, 03:15:17
+    Author     : Turnyur Siy
+*/
+
+.AboutUs{
+/*   -fx-background-color: linear-gradient(to bottom left,#00005b,#483d7b );
+  -fx-text-fill: #ceccee;  
+  -fx-border-color: #222222;
+  -fx-border-radius: 30px;
+  -fx-effect: dropshadow(gaussian,black,20,0.3,5px,5px);*/
+-fx-background-color: linear-gradient(to bottom right,black,darkgray );
+   -fx-border-radius: 10px;
+   -fx-text-fill: linear-gradient(to bottom,orange,#ea8308 );//#Fa8308;
+  
+}
+
+.back{
+ 
+}
+.back:pressed{
+     -fx-background-color: linear-gradient(to bottom left,#00005b,#483d7b );
+  -fx-text-fill: #ceccee;  
+  
+}
+.text-shown{
+    -fx-text-fill: linear-gradient(to bottom,#229294,#0cafb2 );//#Fa8308;
+  
+}
+.top-menu{
+    -fx-background-color: linear-gradient(to top, #f20, #f70 )  ;
+    -fx-effect: dropshadow(gaussian,black,20,0.3,5px,5px);
+    -fx-border-color: #222222;
+    -fx-border-radius: 20px;
+}
+.top-menu:active{
+    -fx-background-color: linear-gradient(to top, #810, #a60 )  ;
+    -fx-border-color: #eeffff;
+    -fx-effect: dropshadow(three-pass-box,black,20,0.3,5px,5px);
+    -fx-border-radius: 20px;
+}
+.orange-button{
+    -fx-background-color: linear-gradient(to top, #d20, #d70 )  ;
+    -fx-text-fill:  #eeffff;
+    
+}
+.img{
+    
+    -fx-background-color: black;
+    -fx-effect: dropshadow(gaussian,black,20,0.3,-5px,-16px);
+    -fx-border-color: #111100;
+    -fx-border-radius: 50px;
+}
+.text_area{
+    -fx-background-color: green;
+    -fx-text-fill: linear-gradient(to top, #d20, #d70 );
+}
+
+
+//AdvanceCalculator.css
+
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14-Sep-2016, 07:48:18
+    Author     : Turnyur Siy
+*/
+/*.vbox{
+    -fx-border-radius: 100px;
+}*/
+.mainBackground{
+    -fx-background-color: black;
+    -fx-effect: dropshadow(gaussian,black,20,0.3,5px,5px);
+    -fx-border-color: #222222;
+    -fx-border-radius: 20px;
+}
+
+.display{
+   -fx-background-color: linear-gradient(to bottom right,black,darkgray );
+   -fx-border-radius: 10px;
+   -fx-background-insets: 10,20,5,2;
+   -fx-text-fill: linear-gradient(to bottom,orange,#ea8308 );//#Fa8308;
+}
+.normal-blue-button{
+  -fx-background-color: linear-gradient(to bottom left,#00005b,#483d7b );
+  -fx-text-fill: /*#ceccee;  */linear-gradient(to top, yellow, #d70 )  ;
+}
+.normal-other-button{
+    -fx-background-color: linear-gradient(to bottom left,#483d8b,black );
+    -fx-text-fill: /*wheat;*/linear-gradient(to top, yellow, #d70 )  ;
+}
+.orange-button{
+    -fx-background-color: linear-gradient(to top, #d20, #d70 )  ;
+    -fx-text-fill: /* #eeffff;*/linear-gradient(to top, wheat, white )  ;
+    
+}
+.normal-other-button:hover,.normal-blue-button:hover{
+     -fx-background-color: linear-gradient(to bottom,#594ecf,black );
+    -fx-text-fill: wheat;
+}
+.normal-other-button:pressed,.normal-blue-button:pressed{
+    -fx-background-color: linear-gradient(to top, #f20, #f70 )  ;
+    -fx-text-fill: white;
+
+}
+.top-menu{
+    -fx-background-color: linear-gradient(to top, #f20, #f70 )  ;
+    -fx-effect: dropshadow(gaussian,black,20,0.3,5px,5px);
+    -fx-border-color: #222222;
+    -fx-border-radius: 20px;
+}
+.top-menu:active{
+    -fx-background-color: linear-gradient(to top, #810, #a60 )  ;
+    -fx-border-color: #eeffff;
+    -fx-effect: dropshadow(three-pass-box,black,20,0.3,5px,5px);
+    -fx-border-radius: 20px;
+}
+
+
+
+

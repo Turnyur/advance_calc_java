@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdvanceCalculatorController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="349.0">
+         <children>
+            <VBox fx:id="calcVBox" layoutX="-1.0" layoutY="28.0" prefHeight="484.0" prefWidth="350.0" styleClass="mainBackground">
+               <children>
+                  <TextField fx:id="txtDisplay" editable="false" layoutX="65.0" layoutY="5.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="149.0" prefWidth="348.0" styleClass="display" text="Advance Calculator by:">
+                    
+                      <font>
+                        <Font size="18.0" />
+                     </font>
+                     
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip graphicTextGap="2.0" maxWidth="100.0" text="Turnyur Softwares" textAlignment="CENTER">
+                           <font>
+                              <Font name="Franklin Gothic Book" size="17.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </TextField>
+                  <Pane />
+                  <VBox>
+                     <children>
+                        <ImageView fitHeight="41.0" fitWidth="222.0" styleClass="img" translateX="10.0" translateY="20.0">
+                           <image>
+                              <Image url="@Mylogo.jpg" />
+                           </image>
+                           
+                        </ImageView>
+                     </children>
+                     <effect>
+                              <Reflection fraction="1.6" topOffset="0.6" topOpacity="0.5" />
+                           </effect>
+                  </VBox>
+                  <VBox prefHeight="260.0" prefWidth="348.0" styleClass="display" translateY="70.0">
+                     <children>
+                        <SwingNode fx:id="about_me_node" />
+                     </children></VBox>
+                  <ImageView fitHeight="162.0" fitWidth="200.0" opacity="0.66" translateX="80.0" translateY="-100.0">
+                     <image>
+                        <Image url="@First_Correct_PCB_5.png" />
+                     </image>
+                     <styleClass>
+                        <String fx:value="display" />
+                        <String fx:value="img" />
+                     </styleClass>
+                  </ImageView>
+               </children>
+            </VBox>
+            <ToolBar layoutX="-1.0" prefHeight="37.0" prefWidth="350.0" styleClass="orange-button">
+               <items>
+                  <MenuBar maxWidth="350.0" prefHeight="27.0" prefWidth="331.0" styleClass="top-menu" translateX="4.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" onAction="#handleButtonBack" text="Ξ" />
+                      <Menu mnemonicParsing="false" text="Back">
+                        <items>
+                          <MenuItem fx:id="AboutTurnyur" mnemonicParsing="false" onAction="#handleAboutUs" text="Back" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </items>
+            </ToolBar>
+            <ImageView fitHeight="84.0" fitWidth="239.0" layoutX="-17.0" styleClass="img" translateX="75.0" translateY="415.0">
+               <image>
+                  <Image url="@knight%20logoz.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

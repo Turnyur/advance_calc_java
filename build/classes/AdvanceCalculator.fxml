@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdvanceCalculatorController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="349.0">
+         <children>
+            <VBox fx:id="calcVBox" layoutX="-1.0" layoutY="28.0" prefHeight="484.0" prefWidth="350.0" styleClass="mainBackground">
+               <children>
+                  <TextField fx:id="txtDisplay" editable="false" layoutX="65.0" layoutY="5.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="196.0" prefWidth="233.0" styleClass="display">
+                    <effect>
+                        <Reflection fraction="0.9" topOffset="2.5" topOpacity="0.5" />
+                     </effect>
+                      <font>
+                        <Font size="35.0" />
+                     </font>
+                     
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip graphicTextGap="2.0" maxWidth="100.0" text="Turnyur Softwares" textAlignment="CENTER">
+                           <font>
+                              <Font name="Franklin Gothic Book" size="17.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </TextField>
+                  <Pane>
+                     <children>
+                        <GridPane prefHeight="280.0" prefWidth="348.0" VBox.vgrow="ALWAYS">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" prefWidth="60.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" prefWidth="60.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" prefWidth="60.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="10.0" prefWidth="60.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button fx:id="btnEqual" layoutX="342.0" layoutY="250.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleEqualButton" prefHeight="50.0" styleClass="normal-blue-button" text="=" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnDiv" layoutX="404.0" layoutY="147.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleNumberOperator" prefHeight="50.0" styleClass="normal-blue-button" text="÷" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnFive" layoutX="279.0" layoutY="181.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="5" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnTwo" layoutX="279.0" layoutY="215.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="2" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnNine" layoutX="342.0" layoutY="147.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="9" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnDot" layoutX="219.0" layoutY="250.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="." GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="214.0" layoutY="116.0" maxHeight="30.0" maxWidth="290.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="289.0" styleClass="orange-button" text="produced by t-softwares" GridPane.columnSpan="3">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <padding>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </padding>
+                              </Button>
+                              <Button fx:id="btnAdd" layoutX="404.0" layoutY="250.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleNumberOperator" prefHeight="50.0" styleClass="normal-blue-button" text="+" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnOne" layoutX="219.0" layoutY="215.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="1" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnThree" layoutX="342.0" layoutY="215.0" maxHeight="50.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" styleClass="normal-other-button" text="3" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnFour" layoutX="219.0" layoutY="181.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="4" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnZero" layoutX="279.0" layoutY="250.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnMul" layoutX="404.0" layoutY="181.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleNumberOperator" prefHeight="50.0" styleClass="normal-blue-button" text="x" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnEight" layoutX="279.0" layoutY="147.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="8" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnSeven" layoutX="219.0" layoutY="147.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="7" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnSub" layoutX="404.0" layoutY="215.0" maxHeight="50.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleNumberOperator" styleClass="normal-blue-button" text="-" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnSix" layoutX="342.0" layoutY="181.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="6" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnBack" layoutX="399.0" layoutY="116.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleClearButton" prefHeight="30.0" text="clear" GridPane.columnIndex="5">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="2.0" />
+                                 </GridPane.margin>
+                                 <styleClass>
+                                    <String fx:value="orange-button" />
+                                    <String fx:value="normal-blue-button" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="btnBin" layoutX="131.0" layoutY="197.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="bin" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnTan" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="tan" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnHex" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="hex" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnCos" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="cos" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnSin" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="sin" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnLog" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="log" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnRoot" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="√x" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnSquare" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="50.0" styleClass="normal-other-button" text="x²" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnPi" maxHeight="46.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="33.0" prefWidth="52.0" styleClass="normal-other-button" text="π" GridPane.rowIndex="5" />
+                              <Button fx:id="btnAsin" maxHeight="46.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" styleClass="normal-other-button" text="asin" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Button fx:id="btnAcos" maxHeight="46.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" styleClass="normal-other-button" text="acos" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <Button fx:id="btnAtan" maxHeight="46.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" styleClass="normal-other-button" text="atan" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                              <Button fx:id="btnNLog" maxHeight="46.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" styleClass="normal-other-button" text="Ln" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                              <Button fx:id="btnExp" maxHeight="46.0" maxWidth="60.0" mnemonicParsing="false" onAction="#handleGeneralAction" prefHeight="27.0" prefWidth="39.0" styleClass="normal-other-button" text="e˟" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <ToolBar layoutX="-1.0" prefHeight="37.0" prefWidth="355.0" styleClass="orange-button">
+               <items>
+                  <MenuBar maxWidth="350.0" prefHeight="27.0" prefWidth="331.0" styleClass="top-menu" translateX="4.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem fx:id="close" mnemonicParsing="false" onAction="#handleClose" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem fx:id="delete" mnemonicParsing="false" onAction="#handleDelete" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem fx:id="AboutTurnyur" mnemonicParsing="false" onAction="#handleButtonBack" text="About T-Softwares" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </items>
+            </ToolBar>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
